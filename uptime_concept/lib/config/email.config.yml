@@ -1,0 +1,6 @@
+mail_to: 'felipe.michetti@kuadro.com.br'
+mail_subject: 'The instance is down '
+mail_user: 'felipe.michetti@kuadro.com.br'
+mail_passwd: 's394asc9'
+uptime_message: 'KuadroAlert UP: {instance_name} ({target}) is UP again at {start_time}, after {minutes_count} of downtime.'
+downtime_message: 'KuadroAlert DOWN alert: {instance_name} ({target}) is down since {timestamp}. Reason: Socket timeout, unable to connect to server.'
