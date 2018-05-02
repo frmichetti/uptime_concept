@@ -1,5 +1,5 @@
-host: localhost
-user: postgres
-password: postgres
-database: uptime
-port: 5432
+host: xxxx
+user: xxxx
+password: xxxx
+database: xxxx
+port: xxxx
