@@ -1,4 +1,5 @@
 require 'gmail'
+require_relative 'load_config'
 
 class MailSender
   include ConfigLoader

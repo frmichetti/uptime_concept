@@ -128,7 +128,7 @@ class App < Sinatra::Application
   #####################
 
   job_factory = lambda do |endpoint_key|
-    @scheduler.every '5s', job: true do
+    @scheduler.every '1s', job: true do
       ping_block.call(ENDPOINTS[endpoint_key])
     end
   end
