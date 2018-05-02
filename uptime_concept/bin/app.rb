@@ -80,7 +80,8 @@ class App < Sinatra::Application
   #####################
 
   ping_block = lambda do |instance|
-    ping = Net::Ping::HTTP.new(instance['endpoint'], 80, 6)
+    port = instance['endpoint'].include?('https://') ? 443 : 80
+    ping = Net::Ping::HTTP.new(instance['endpoint'], port, 6)
     ping.get_request = true
     ping.ping?
 

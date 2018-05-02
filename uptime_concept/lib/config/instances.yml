@@ -1,21 +1,9 @@
-google:
- name: 'Google'
- endpoint: 'http://google.com'
 pv:
  name: 'Kuadro PV'
  endpoint: 'https://pv.kuadro.com.br'
 site:
  name: 'Kuadro Site'
- endpoint: 'http://www.kuadro.com.br'
+ endpoint: 'https://www.kuadro.com.br'
 blog:
  name: 'Kuadro Blog'
  endpoint: 'https://blog.kuadro.com.br'
-unknown:
- name: 'Kuadro Unknown'
- endpoint: 'http://unknown.kuadro.com.br'
-chat:
- name: 'Kuadro Chat'
- endpoint: 'http://chat.kuadro.com.br.'
-resque:
- name: 'Kuadro Resque'
- endpoint: 'http://resque.kuadro.com.br.'
