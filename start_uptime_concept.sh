@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-/usr/local/bin/rackup uptime_concept/config.ru
+cd uptime_concept
+/usr/local/bin/rackup config.ru
