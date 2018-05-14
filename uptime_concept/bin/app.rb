@@ -94,7 +94,6 @@ class App < Sinatra::Application
       warning: ping.warning
     }
 
-    statistic = Statistic.find_or_create(server_name: instance['endpoint'])
 
     ##############
     # Observer's #
@@ -105,18 +104,23 @@ class App < Sinatra::Application
       lambda { |x|
         puts 'On Next: ' + x.to_s
         puts response.to_json
-        @downtime_queue << { instance: instance, instant: Time.new, exception: x.exception } if x.exception
+        @downtime_queue << { instance: instance, instant: Time.new, exception: x&.exception } if x&.exception
         if (200..302).cover?(x&.code.to_i)
-          statistic.update(uptime_count: statistic.uptime_count + 1)
+          stats = Statistic.new(server_name: instance['endpoint'], instant: Time.now, up: true, duration: x&.duration)
+          stats.save if stats.valid?
         else
-          statistic.update(downtime_count: statistic.downtime_count + 1)
+          stats = Statistic.new(server_name: instance['endpoint'], instant: Time.now, up: false, warning: x&.exception)
+          stats.save if stats.valid?
         end
       },
       lambda { |err|
         puts 'On Error: ' + err.to_s
         @downtime_queue << { instance: instance, instant: Time.new, error: err }
       },
-      -> { puts 'On Completed' }
+      -> {
+        puts 'On Completed'
+        sleep(1)
+      }
     )
   end
 

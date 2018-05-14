@@ -1,9 +1,16 @@
-CREATE TABLE statistics
-(
-  id SERIAL PRIMARY KEY NOT NULL,
-  server_name VARCHAR(255) NOT NULL,
-  uptime_count BIGSERIAL NOT NULL,
-  downtime_count BIGSERIAL NOT NULL
+create table if not exists statistics(
+  id serial not null
+    constraint statistics_pkey
+    primary key,
+  server_name varchar(255) not null,
+  instant timestamp default now() not null,
+  up boolean default false not null,
+  warning text,
+  duration double precision
+    constraint duration_check
+    check (duration > (0)::double precision)
 );
-CREATE UNIQUE INDEX statistics_server_name_uindex ON statistics (server_name);
-CREATE UNIQUE INDEX statistics_id_uindex ON statistics (id);
+
+create unique index if not exists statistics_id_uindex
+  on statistics (id)
+;
