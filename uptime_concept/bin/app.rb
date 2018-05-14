@@ -106,10 +106,10 @@ class App < Sinatra::Application
         puts response.to_json
         @downtime_queue << { instance: instance, instant: Time.new, exception: x&.exception } if x&.exception
         if (200..302).cover?(x&.code.to_i)
-          stats = Statistic.new(server_name: instance['endpoint'], instant: Time.now, up: true, duration: x&.duration)
+          stats = Statistic.new(server_name: instance['endpoint'], instant: Time.now, up: true, duration: x&.duration, code: x&.code.to_i )
           stats.save if stats.valid?
         else
-          stats = Statistic.new(server_name: instance['endpoint'], instant: Time.now, up: false, warning: x&.exception)
+          stats = Statistic.new(server_name: instance['endpoint'], instant: Time.now, up: false, warning: x&.exception, code: x&.code.to_i)
           stats.save if stats.valid?
         end
       },

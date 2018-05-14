@@ -14,3 +14,5 @@ create table if not exists statistics(
 create unique index if not exists statistics_id_uindex
   on statistics (id)
 ;
+
+ALTER TABLE statistics ADD code int NULL;

@@ -42,8 +42,8 @@
     </role>
     <schema id="10" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-05-14.20:26:07.338</IntrospectionTimestamp>
-      <IntrospectionStateNumber>33280</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-05-14.20:35:19.387</IntrospectionTimestamp>
+      <IntrospectionStateNumber>34838</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -71,7 +71,7 @@
     </sequence>
     <table id="17" parent="10" name="statistics">
       <ObjectId>32763</ObjectId>
-      <StateNumber>33279</StateNumber>
+      <StateNumber>34416</StateNumber>
     </table>
     <column id="18" parent="17" name="id">
       <Position>1</Position>
@@ -117,23 +117,29 @@
       <StateNumber>33279</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <index id="24" parent="17" name="statistics_id_uindex">
+    <column id="24" parent="17" name="code">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>34838</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="25" parent="17" name="statistics_id_uindex">
       <ObjectId>32775</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="25" parent="17" name="statistics_pkey">
+    <index id="26" parent="17" name="statistics_pkey">
       <ObjectId>32773</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="26" parent="17" name="statistics_pkey">
+    <key id="27" parent="17" name="statistics_pkey">
       <ObjectId>32774</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>statistics_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <check id="27" parent="17" name="duration_check">
+    <check id="28" parent="17" name="duration_check">
       <ObjectId>32769</ObjectId>
       <ColNames>duration</ColNames>
       <Predicate>duration &gt; (0)::double precision</Predicate>
