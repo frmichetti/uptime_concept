@@ -1,4 +1,6 @@
-create table if not exists statistics(
+drop table if exists statistics;
+
+create table statistics(
   id serial not null
     constraint statistics_pkey
     primary key,
@@ -8,11 +10,10 @@ create table if not exists statistics(
   warning text,
   duration double precision
     constraint duration_check
-    check (duration > (0)::double precision)
+    check (duration > (0)::double precision),
+  code integer
 );
 
-create unique index if not exists statistics_id_uindex
-  on statistics (id)
-;
+create unique index statistics_id_uindex
+  on statistics (id);
 
-ALTER TABLE statistics ADD code int NULL;
