@@ -10,5 +10,16 @@
       <user-name>postgres</user-name>
       <introspection-schemas>uptime:public</introspection-schemas>
     </data-source>
+    <data-source name="postgres@localhost" uuid="6024b46c-53ad-4c3f-837b-51f7cecf65eb">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Kuadro Prod" uuid="c5adea54-0b63-4b89-b6d3-ab45de9ac318">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>xpxkbtgjtylqgm</user-name>
+    </data-source>
   </component>
 </project>
