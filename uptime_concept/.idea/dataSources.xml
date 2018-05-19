@@ -7,5 +7,17 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/uptime</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="postgres@localhost" uuid="6024b46c-53ad-4c3f-837b-51f7cecf65eb">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Kuadro Prod" uuid="c5adea54-0b63-4b89-b6d3-ab45de9ac318">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://kuadro-prod.clnasyj9zi6n.sa-east-1.rds.amazonaws.com:5432/kuadro_devops</jdbc-url>
+    </data-source>
   </component>
 </project>

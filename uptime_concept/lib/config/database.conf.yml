@@ -1,5 +1,5 @@
-host: localhost
-user: postgres
-password: postgres
-database: uptime
+host: kuadro-prod.clnasyj9zi6n.sa-east-1.rds.amazonaws.com
+user: xpxkbtgjtylqgm
+password: WbAaM-J2AdnF7DnlGmIUCiX6YV
+database: kuadro_devops
 port: 5432
