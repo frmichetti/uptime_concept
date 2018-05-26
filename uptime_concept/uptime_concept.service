@@ -1,0 +1,16 @@
+[Unit]
+Description=DevOps-Uptime-Concept
+
+[Service]
+SyslogIdentifier=uptime-concept-app
+User=ec2-user
+PIDFile=/home/ec2-user/devops/uptime_concept-app.pid
+WorkingDirectory=/home/ec2-user/devops
+
+ExecStart=/home/ec2-user/devops/start_uptime_concept.sh
+ExecReload=/home/ec2-user/devops/start_uptime_concept.sh
+ExecStop=/bin/kill -s QUIT $MAINPID
+Restart=always
+
+[Install]
+ WantedBy=multi-user.target
