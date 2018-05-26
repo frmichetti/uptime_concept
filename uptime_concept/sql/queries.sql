@@ -2,17 +2,18 @@
 select server_name, instant, warning from statistics where (up is false)
   and (instant > current_timestamp - interval '1 day');
 
-/*Donwntime in this Month*/
+/*Downtime in this Month*/
 select server_name, instant, warning from statistics where (up is false)
    and (instant > current_timestamp - interval '1 month');
 
-/*Donwntime in three Month*/
+/*Downtime in three Months*/
 select server_name, instant, warning from statistics where (up is false)
   and (instant > current_timestamp - interval '3 month');
 
 /*Donwntime in six Month*/
 select server_name, instant, warning from statistics where (up is false)
   and (instant > current_timestamp - interval '6 month');
+
 /*Downtime Count today*/
 select server_name , count(*) as "downtime_count_today" from statistics
   where (up is false) and (instant > current_timestamp - interval '1 day') group by server_name;

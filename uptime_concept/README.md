@@ -15,4 +15,15 @@ For each register in config/instances.yml create a ping cron job.
     config/email.config.yml
 
 ## Run with    
-    rackup config.ru
+    rackup config.ru    
+    
+## Create a service
+  Move uptime_concept.service to /lib/systemd/system/uptime_concept.service
+### Enable the service   
+   * sudo systemctl enable uptime_concept.service
+### If you have made changes to your service, you may need to reload the daemon        
+   * sudo systemctl daemon-reload
+### Start/Restart/Stop the service
+   * sudo service uptime_concept.service start
+   
+# it works on my machine!   
