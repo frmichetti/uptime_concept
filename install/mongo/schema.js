@@ -57,3 +57,5 @@ db.logs.createIndex({user_id:1})
 db.logs.createIndex({request_time:1})
 db.logs.createIndex({sinatra_route:1})
 db.user_sessions.createIndex({user_id:1})
+use kuadro_log
+db.createUser({ user: "kuadro_admin", pwd: "qwkljrhadslkfjadslkfjdsaklfj", roles: [{ role: "readWrite", db: "kuadro_log" }] })

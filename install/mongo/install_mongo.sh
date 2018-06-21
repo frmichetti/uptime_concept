@@ -93,10 +93,10 @@ schema_path="$schema_target_dir"'/'"$schema_file_name"
 instance_ip_address=$1
 scp -i  ~/.ssh/kuadro-prod.pem -o "StrictHostKeyChecking no" $schema_file_name ec2-user@$instance_ip_address:$schema_target_dir
 scp -i  ~/.ssh/kuadro-prod.pem -o "StrictHostKeyChecking no" $schema_file_name ec2-user@$instance_ip_address:$schema_target_dir
+ssh -i  ~/.ssh/kuadro-prod.pem -o "StrictHostKeyChecking no" ec2-user@$instance_ip_address "$(typeset -f); exec_migration_script $schema_path"
 scp -i  ~/.ssh/kuadro-prod.pem -o "StrictHostKeyChecking no" $cfg_file_name ec2-user@$instance_ip_address:/tmp/
 ssh -i  ~/.ssh/kuadro-prod.pem -o "StrictHostKeyChecking no" ec2-user@$instance_ip_address 'sudo mv /tmp/'"$cfg_file_name"' /etc/'
 ssh -i  ~/.ssh/kuadro-prod.pem -o "StrictHostKeyChecking no" ec2-user@$instance_ip_address 'sudo service mongod restart'
-ssh -i  ~/.ssh/kuadro-prod.pem -o "StrictHostKeyChecking no" ec2-user@$instance_ip_address "$(typeset -f); exec_migration_script $schema_path"
 ssh -i  ~/.ssh/kuadro-prod.pem -o "StrictHostKeyChecking no" ec2-user@$instance_ip_address "rm $schema_path"
 }
 
