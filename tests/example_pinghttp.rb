@@ -6,7 +6,7 @@
 ########################################################################
 require 'net/ping'
 
-good = 'http://www.kuadro.com.br'
+good = 'https://www.google.com.br'
 bad  = 'http://www.ruby-lang.org/index.html'
 
 puts "== Good ping, no redirect"

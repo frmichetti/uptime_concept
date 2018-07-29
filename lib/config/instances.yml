@@ -1,9 +1,12 @@
-pv:
- name: 'Kuadro PV'
- endpoint: 'https://pv.kuadro.com.br'
-site:
- name: 'Kuadro Site'
- endpoint: 'https://www.kuadro.com.br'
-blog:
- name: 'Kuadro Blog'
- endpoint: 'https://blog.kuadro.com.br'
+uol:
+ name: 'ping_UOL'
+ endpoint: 'https://www.uol.com.br'
+terra:
+ name: 'ping_Terra'
+ endpoint: 'https://www.terra.com.br'
+ig:
+ name: 'ping_IG'
+ endpoint: 'https://ig.com.br'
+google:
+ name: 'ping_Google'
+ endpoint: 'https://google.com.br'

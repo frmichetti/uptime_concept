@@ -6,7 +6,7 @@
 ########################################################################
 require 'net/ping'
 
-host = 'www.kuadro.com.br'
+host = 'www.google.com.br'
 
 u = Net::Ping::UDP.new(host)
 p u.ping?

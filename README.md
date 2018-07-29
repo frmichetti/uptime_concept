@@ -1,6 +1,6 @@
-# Kuadro Uptime Concept 
+# Uptime Concept 
 
-### Micro sinatra application that pings the Kuadro Instances to provide data for Metabase
+### Micro sinatra application that pings a Server Instances to provide data for Metabase
 
 For each register in config/instances.yml create a ping cron job.
 

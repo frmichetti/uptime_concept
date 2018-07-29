@@ -6,7 +6,7 @@
 ########################################################################
 require 'net/ping'
 
-good = 'www.kuadro.com.br'
+good = 'www.google.com.br'
 bad  = 'foo.bar.baz'
 
 p1 = Net::Ping::External.new(good)

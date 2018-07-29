@@ -7,7 +7,7 @@
 require 'net/ping'
 require 'json'
 
-good = 'www.kuadro.com.br'
+good = 'www.google.com.br'
 _bad = 'foo.bar.baz'
 
 loop do
