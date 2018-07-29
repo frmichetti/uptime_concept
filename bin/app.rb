@@ -9,7 +9,7 @@ class App < Sinatra::Application
   use Rack::PostBodyContentTypeParser
 
   use Rack::Auth::Basic, 'Protected Area' do |username, password|
-    username == 'kuadro' && password == 'kuadrodevops'
+    username == 'root' && password == 'rootdevops'
   end
 
   extend DBConnection
@@ -166,7 +166,7 @@ class App < Sinatra::Application
 
   at_exit do
     puts 'Killing Rufus!'
-    @mail_sender.message('Killing Kuadro Ping', 'Kuadro ping is Dead') if production?
+    @mail_sender.message('Killing Uptime Concept Ping', 'Uptime Concept ping is Dead') if production?
 
     # let's unschedule all the at jobs
 

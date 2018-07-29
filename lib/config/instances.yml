@@ -1,0 +1,12 @@
+uol:
+ name: 'ping_UOL'
+ endpoint: 'https://www.uol.com.br'
+terra:
+ name: 'ping_Terra'
+ endpoint: 'https://www.terra.com.br'
+ig:
+ name: 'ping_IG'
+ endpoint: 'https://ig.com.br'
+google:
+ name: 'ping_Google'
+ endpoint: 'https://google.com.br'

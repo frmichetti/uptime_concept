@@ -1,9 +1,0 @@
-pv:
- name: 'Kuadro PV'
- endpoint: 'https://pv.kuadro.com.br'
-site:
- name: 'Kuadro Site'
- endpoint: 'https://www.kuadro.com.br'
-blog:
- name: 'Kuadro Blog'
- endpoint: 'https://blog.kuadro.com.br'

@@ -17,7 +17,7 @@ module Controllers
 
         app.get '/status' do
           content_type :json
-          variables = app.instance_variables.select {|var| var.to_s.include?('kuadro')}
+          variables = app.instance_variables.select {|var| var.to_s.include?('ping')}
           endpoints = []
           variables.each {|v|
             var = app.instance_variable_get(v.to_s)

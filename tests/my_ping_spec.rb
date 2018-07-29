@@ -13,7 +13,7 @@ describe 'My behaviour' do
     require 'net/ping'
 
     loop do
-      break if system('ping www.kuadro.com.br -c 1')
+      break if system('ping www.google.com.br -c 1')
       sleep 1
       puts 'Internet working!'
     end
