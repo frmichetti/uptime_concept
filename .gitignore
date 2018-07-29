@@ -2,3 +2,4 @@
 .idea/*
 config/database.conf.yml
 config/email.config.yml
+Gemfile.lock
